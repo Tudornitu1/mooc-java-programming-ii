@@ -1,0 +1,23 @@
+import java.util.*;
+
+public class ProductWarehouse extends Warehouse{
+    private String productName;
+
+    public ProductWarehouse(String productName, double capacity){
+        super(capacity);
+        this.productName=productName;
+    }
+    public String getName(){
+        return productName;
+    }
+
+    public void setName(String newName) {
+        this.productName=newName;
+    }
+
+    public String toString() {
+        return this.productName+": balance = "+this.getBalance()+", space left "+(this.getCapacity()-this.getBalance());
+    }
+
+    
+}
